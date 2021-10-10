@@ -50,7 +50,7 @@ public class Robot extends TimedRobot {
         break;
       case DAPHNE2:
         m_daphneTwoContainer = new DaphneTwoContainer();
-        m_autonomousCommand = m_daphneTwoContainer.getAutonomousCommand();
+        //m_autonomousCommand = m_daphneTwoContainer.getAutonomousCommand();
         break;
       case TESTBED:
         m_testbedContainer = new TestbedContainer();

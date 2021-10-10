@@ -9,40 +9,41 @@ package frc.robot;
 
 import com.ctre.phoenix.motorcontrol.can.TalonFX;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
-import edu.wpi.first.wpilibj.Compressor;
-import edu.wpi.first.wpilibj.GenericHID;
+//import edu.wpi.first.wpilibj.Compressor;
+//import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
-import edu.wpi.first.wpilibj.geometry.Pose2d;
-import edu.wpi.first.wpilibj.geometry.Rotation2d;
-import edu.wpi.first.wpilibj2.command.Command;
-import edu.wpi.first.wpilibj2.command.ConditionalCommand;
-import edu.wpi.first.wpilibj2.command.InstantCommand;
-import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
+//import edu.wpi.first.wpilibj.geometry.Pose2d;
+//import edu.wpi.first.wpilibj.geometry.Rotation2d;
+//import edu.wpi.first.wpilibj2.command.Command;
+//import edu.wpi.first.wpilibj2.command.ConditionalCommand;
+//import edu.wpi.first.wpilibj2.command.InstantCommand;
+//
+//import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 
-import frc.robot.commands.ReadLimelight;
+//import frc.robot.commands.ReadLimelight;
 
-import frc.robot.commands.AutoPaths.AutoPath1;
-import frc.robot.commands.AutoPaths.AutoPath2;
-import frc.robot.commands.AutoPaths.GalacticSearch;
-import frc.robot.commands.AutoPaths.GalacticSearchTest;
-import frc.robot.commands.AutoPaths.SensorTest;
-import frc.robot.commands.climber.*;
+//import frc.robot.commands.AutoPaths.AutoPath1;
+//import frc.robot.commands.AutoPaths.AutoPath2;
+//import frc.robot.commands.AutoPaths.GalacticSearch;
+//import frc.robot.commands.AutoPaths.GalacticSearchTest;
+//import frc.robot.commands.AutoPaths.SensorTest;
+//import frc.robot.commands.climber.*;
 //import frc.robot.commands.controlpanel.SpinnerCommand;
-import frc.robot.commands.conveyor.*;
-import frc.robot.commands.intake.*;
-import frc.robot.commands.shooter.AutoShoot;
-import frc.robot.commands.shooter.SetShooterSpeed;
+//import frc.robot.commands.conveyor.*;
+//import frc.robot.commands.intake.*;
+//import frc.robot.commands.shooter.AutoShoot;
+//import frc.robot.commands.shooter.SetShooterSpeed;
 import frc.robot.commands.swervedrive.*;
-import frc.robot.subsystems.ClimberTalon;
-import frc.robot.subsystems.Color.ColorPanelSpinner;
-import frc.robot.subsystems.Color.ColorSensor;
-import frc.robot.subsystems.ConveyorTalon;
+//import frc.robot.subsystems.ClimberTalon;
+//import frc.robot.subsystems.Color.ColorPanelSpinner;
+//import frc.robot.subsystems.Color.ColorSensor;
+//import frc.robot.subsystems.ConveyorTalon;
 import frc.robot.subsystems.Drive.SwerveDriveModule;
-import frc.robot.subsystems.Intake;
-import frc.robot.subsystems.Limelight;
-import frc.robot.subsystems.LimelightPortal;
-import frc.robot.subsystems.Shooter;
+//import frc.robot.subsystems.Intake;
+//import frc.robot.subsystems.Limelight;
+//import frc.robot.subsystems.LimelightPortal;
+//import frc.robot.subsystems.Shooter;
 import frc.robot.subsystems.Drive.SwerveDriveSubsystem;
 import frc.robot.utility.TrajectoryMaker;
 
@@ -57,18 +58,18 @@ public class DaphneTwoContainer {
   // The robot's subsystems and commands are defined here...
 
   private final XboxController mXboxController;
-  private final XboxController mXboxController2;  //operator controller
+  //private final XboxController mXboxController2;  //operator controller
 
   private final SwerveDriveSubsystem swerveDriveSubsystem;
   //private final ColorPanelSpinner colorPanelSpinner;
   //private final ColorSensor colorSensor; isnt installed on robot.
-  private final Limelight limelight;
-  private final ConveyorTalon conveyorT;
-  private final Intake intake;
-  private final Shooter shooterMotor;
-  private final Compressor compressor;
-  private final ClimberTalon climberT;
-  private final LimelightPortal limeL;
+  //private final Limelight limelight;
+  //private final ConveyorTalon conveyorT;
+  //private final Intake intake;
+  //private final Shooter shooterMotor;
+  //private final Compressor compressor;
+  //private final ClimberTalon climberT;
+  //private final LimelightPortal limeL;
 
   /**
    * The container for the robot. Contains subsystems, OI devices, and commands.
@@ -84,22 +85,22 @@ public class DaphneTwoContainer {
     swerveDriveSubsystem.zeroGyro();
     //colorPanelSpinner = new ColorPanelSpinner();
     //colorSensor = new ColorSensor(); isnt installed on robot.
-    limelight = new Limelight(swerveDriveSubsystem);
-    conveyorT = new ConveyorTalon();
-    intake = new Intake();
-    shooterMotor = new Shooter();
-    compressor = null; //new Compressor();
-    climberT = new ClimberTalon();
-    limeL = new LimelightPortal();
+    //limelight = new Limelight(swerveDriveSubsystem);
+    //conveyorT = new ConveyorTalon();
+    //intake = new Intake();
+    //shooterMotor = new Shooter();
+    //compressor = null; //new Compressor();
+    //climberT = new ClimberTalon();
+    //limeL = new LimelightPortal();
 
     // create the input controllers
     mXboxController = new XboxController(0);
-    mXboxController2 = new XboxController(1);
+    //mXboxController2 = new XboxController(1);
 
     // setup any default commands
     swerveDriveSubsystem.setDefaultCommand(new HolonomicDriveCommand(swerveDriveSubsystem, mXboxController));
     //colorPanelSpinner.setDefaultCommand(new SpinnerCommand(colorPanelSpinner, mXboxController2));
-    conveyorT.setDefaultCommand(new SenseCell(conveyorT));
+    //conveyorT.setDefaultCommand(new SenseCell(conveyorT));
     //climberT.setDefaultCommand(new ClimberArmSpeed(climberT, mXboxController));//599//--------------------
 
     // configure the buttons
@@ -108,30 +109,30 @@ public class DaphneTwoContainer {
   }
 
   public void configureButtonsForPowerPort() {
-    JoystickButton buttonA = new JoystickButton(mXboxController, XboxController.Button.kA.value);
-    JoystickButton buttonX = new JoystickButton(mXboxController, XboxController.Button.kX.value);
-    JoystickButton buttonB = new JoystickButton(mXboxController, XboxController.Button.kB.value);
-    JoystickButton buttonY = new JoystickButton(mXboxController, XboxController.Button.kY.value);
-    JoystickButton leftBumper = new JoystickButton(mXboxController, XboxController.Button.kBumperLeft.value);
+    //JoystickButton buttonA = new JoystickButton(mXboxController, XboxController.Button.kA.value);
+    //JoystickButton buttonX = new JoystickButton(mXboxController, XboxController.Button.kX.value);
+    //JoystickButton buttonB = new JoystickButton(mXboxController, XboxController.Button.kB.value);
+    //JoystickButton buttonY = new JoystickButton(mXboxController, XboxController.Button.kY.value);
+    //JoystickButton leftBumper = new JoystickButton(mXboxController, XboxController.Button.kBumperLeft.value);
     JoystickButton rightBumper = new JoystickButton(mXboxController, XboxController.Button.kBumperRight.value);
     JoystickButton back = new JoystickButton(mXboxController, XboxController.Button.kBack.value);
-    JoystickButton start = new JoystickButton(mXboxController, XboxController.Button.kStart.value);
-    JoystickButton stickLeft = new JoystickButton(mXboxController, XboxController.Button.kStickLeft.value);
-    JoystickButton stickRight = new JoystickButton(mXboxController, XboxController.Button.kStickRight.value);
+    //JoystickButton start = new JoystickButton(mXboxController, XboxController.Button.kStart.value);
+    //JoystickButton stickLeft = new JoystickButton(mXboxController, XboxController.Button.kStickLeft.value);
+    //JoystickButton stickRight = new JoystickButton(mXboxController, XboxController.Button.kStickRight.value);
 
 
-    buttonY.whileHeld(new ConveyorSpeed( conveyorT, .5)); //while Y is held down conveyor runs
-    leftBumper.whileHeld(new SetShooterSpeed(shooterMotor, 6000));
+    //buttonY.whileHeld(new ConveyorSpeed( conveyorT, .5)); //while Y is held down conveyor runs
+    //leftBumper.whileHeld(new SetShooterSpeed(shooterMotor, 6000));
     back.whileHeld(new ZeroNavX(swerveDriveSubsystem));
-    buttonX.whileHeld(new ConveyorSpeed( conveyorT, DaphneTwoConstants.CONVEYOR_UNLOADS_SPEED)); // change seconds later
+    //buttonX.whileHeld(new ConveyorSpeed( conveyorT, DaphneTwoConstants.CONVEYOR_UNLOADS_SPEED)); // change seconds later
     rightBumper.whenPressed(new ToggleFieldOrientedCommand(swerveDriveSubsystem));
-    start.whenPressed(new InstantCommand(() -> {shooterMotor.setMotorRPM(0);}, shooterMotor)); 
+    //start.whenPressed(new InstantCommand(() -> {shooterMotor.setMotorRPM(0);}, shooterMotor)); 
 
-    buttonA.whenPressed(new ToggleConveyorIntake(intake, -1.0));
+    //buttonA.whenPressed(new ToggleConveyorIntake(intake, -1.0));
     //buttonY.whenPressed(new ToggleConveyorIntake(intake, -1));
     //toggle shooter
     //buttonB.whenPressed(new InstantCommand(() -> shooterMotor.toggleShooter(-DaphneTwoConstants.GREEN_RPM), shooterMotor)); //change 1000 rpm later
-    buttonB.whenPressed(new AutoShoot(conveyorT, shooterMotor, true, DaphneTwoConstants.GREEN_RPM, DaphneTwoConstants.CONVEYOR_UNLOADS_SPEED));
+    //buttonB.whenPressed(new AutoShoot(conveyorT, shooterMotor, true, DaphneTwoConstants.GREEN_RPM, DaphneTwoConstants.CONVEYOR_UNLOADS_SPEED));
    // buttonB.whenPressed(new InstantCommand((DaphneTwoConstants.GREEN_RPM) -> toggleShooter() //looking for something that doesn't take parameters  
     //buttonX.whenPressed(new ToggleClimberGearLock(climberT)); 
     //buttonA.whenPressed(new MoveClimberArm(climberT, 1000));
@@ -144,7 +145,7 @@ public class DaphneTwoContainer {
    * ({@link edu.wpi.first.wpilibj.Joystick} or {@link XboxController}), and then
    * passing it to a {@link edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
-  private void configureButtonBindingsForAuto() {
+   /*private void configureButtonBindingsForAuto() {
     JoystickButton buttonA = new JoystickButton(mXboxController, XboxController.Button.kA.value);
     JoystickButton buttonX = new JoystickButton(mXboxController, XboxController.Button.kX.value);
     JoystickButton buttonB = new JoystickButton(mXboxController, XboxController.Button.kB.value);
@@ -172,7 +173,8 @@ public class DaphneTwoContainer {
     /*
     The following is an example of an inline command.  No need to create a CommandBase Subclass for simple commands
     */
-    buttonA.whenPressed(new InstantCommand(intake::toggleIntakeSolenoidMode, intake));
+    
+    /*buttonA.whenPressed(new InstantCommand(intake::toggleIntakeSolenoidMode, intake));
     buttonX.whenPressed(new ToggleFieldOrientedCommand(swerveDriveSubsystem));
     buttonY.whileHeld(new ConveyorSpeed( conveyorT, .5)); //while Y is held down conveyor runs
     //buttonB.whileHeld(new IntakeSpeed(intake,-.5)); //while b is held down intake runs
@@ -207,7 +209,7 @@ public class DaphneTwoContainer {
     //  TrajectoryMaker path = TrajectoryHelper.createBarrel();
 
 
-   TrajectoryMaker path00 = TrajectoryHelper.createBounce00();
+   /*TrajectoryMaker path00 = TrajectoryHelper.createBounce00();
    TrajectoryMaker path01 = TrajectoryHelper.createBounce01();
    TrajectoryMaker path10 = TrajectoryHelper.createBounce10();
    TrajectoryMaker path11 = TrajectoryHelper.createBounce11();
@@ -267,7 +269,7 @@ public class DaphneTwoContainer {
       new AutoPath2(swerveDriveSubsystem), 
       ()->fifty50()));
       */
-  }
+  //}
 
   // public boolean fifty50()
   // {
@@ -282,7 +284,7 @@ public class DaphneTwoContainer {
    *
    * @return the command to run in autonomous
    */
-  public Command getAutonomousCommand() {
+  //public Command getAutonomousCommand() {
     // An ExampleCommand will run in autonomous
     //How can we change this to select the auto routine from the dashboard?
     //return new AutoPath1(swerveDriveSubsystem);
@@ -305,7 +307,7 @@ public class DaphneTwoContainer {
    TrajectoryMaker path30 = TrajectoryHelper.createBounce30();
    TrajectoryMaker path31 = TrajectoryHelper.createBounce31();
 
-
+/*
     Command autoCommand00 = new Autonomous(swerveDriveSubsystem, path00.getTrajectory(), path00.getAngle(), true);
     Command autoCommand01 = new Autonomous(swerveDriveSubsystem, path01.getTrajectory(), path01.getAngle(), false);
     
@@ -321,7 +323,5 @@ public class DaphneTwoContainer {
     //return new SequentialCommandGroup(autoCommand00, autoCommand01, autoCommand10, autoCommand11, autoCommand20, autoCommand21, autoCommand30, autoCommand31); 
     //return new SequentialCommandGroup(autoCommand0, autoCommand1);
     //return new Autonomous(swerveDriveSubsystem, path0.getTrajectory(), path0.getAngle(), true);
-    return new GalacticSearch(swerveDriveSubsystem, intake, conveyorT);
-  }
-
-}
+    return new GalacticSearch(swerveDriveSubsystem, intake, conveyorT); */
+  } 
