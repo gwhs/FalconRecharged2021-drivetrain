@@ -7,6 +7,7 @@
 
 package frc.robot;
 
+
 import com.ctre.phoenix.motorcontrol.can.TalonFX;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 //import edu.wpi.first.wpilibj.Compressor;
@@ -76,10 +77,10 @@ public class DaphneTwoContainer {
    */
   public DaphneTwoContainer() {
     // create all the subsystems needed in this robot
-    SwerveDriveModule m0 = new SwerveDriveModule(0, new TalonSRX(DaphneTwoConstants.ANGLE2_TALON), new TalonFX(DaphneTwoConstants.DRIVE2_TALON), 128); //real:390 practice: 212
-    SwerveDriveModule m1 = new SwerveDriveModule(1, new TalonSRX(DaphneTwoConstants.ANGLE1_TALON), new TalonFX(DaphneTwoConstants.DRIVE1_TALON), 153); //340); //real:293 practice: 59
-    SwerveDriveModule m2 = new SwerveDriveModule(2, new TalonSRX(DaphneTwoConstants.ANGLE3_TALON), new TalonFX(DaphneTwoConstants.DRIVE3_TALON), 265); //real:298 practice: 56
-    SwerveDriveModule m3 = new SwerveDriveModule(3, new TalonSRX(DaphneTwoConstants.ANGLE4_TALON), new TalonFX(DaphneTwoConstants.DRIVE4_TALON), 37); //real: 355 practice: 190 // ````````````````````````````````````````````````````````````````````````````````````````````````````````357
+    SwerveDriveModule m0 = new SwerveDriveModule(0, new TalonSRX(DaphneTwoConstants.ANGLE2_TALON), new TalonFX(DaphneTwoConstants.DRIVE2_TALON), 255); //real:390 practice: 212
+    SwerveDriveModule m1 = new SwerveDriveModule(1, new TalonSRX(DaphneTwoConstants.ANGLE1_TALON), new TalonFX(DaphneTwoConstants.DRIVE1_TALON), 355); //340); //real:293 practice: 59
+    SwerveDriveModule m2 = new SwerveDriveModule(2, new TalonSRX(DaphneTwoConstants.ANGLE3_TALON), new TalonFX(DaphneTwoConstants.DRIVE3_TALON), 91); //real:298 practice: 56
+    SwerveDriveModule m3 = new SwerveDriveModule(3, new TalonSRX(DaphneTwoConstants.ANGLE4_TALON), new TalonFX(DaphneTwoConstants.DRIVE4_TALON), 217); //real: 355 practice: 190 // ````````````````````````````````````````````````````````````````````````````````````````````````````````357
 
     swerveDriveSubsystem = new SwerveDriveSubsystem(m0, m1, m2, m3);
     swerveDriveSubsystem.zeroGyro();

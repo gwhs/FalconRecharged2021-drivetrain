@@ -9,7 +9,7 @@ package frc.robot;
 
 import com.ctre.phoenix.motorcontrol.can.TalonFX;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
-import edu.wpi.first.wpilibj.Compressor;
+//import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
@@ -33,8 +33,8 @@ import frc.robot.subsystems.ConveyorTalon;
 import frc.robot.subsystems.Drive.SwerveDriveModule;
 import frc.robot.subsystems.Drive.SwerveDriveSubsystem;
 import frc.robot.subsystems.Intake;
-import frc.robot.subsystems.Limelight;
-import frc.robot.subsystems.Shooter;
+//import frc.robot.subsystems.Limelight;
+//import frc.robot.subsystems.Shooter;
 
 /**
  * This class is where the bulk of the robot should be declared. Since
@@ -50,11 +50,11 @@ public class DaphneOneContainer {
   private final SwerveDriveSubsystem swerveDriveSubsystem;
   private final ColorPanelSpinner colorPanelSpinner;
   private final ColorSensor colorSensor;
-  private final Limelight limelight;
+  //private final Limelight limelight;
   private final ConveyorTalon conveyor;
   private final Intake intake;
-  private final Shooter shooter;
-  private final Compressor compressor;
+  //private final Shooter shooter;
+  //private final Compressor compressor;
   private final ClimberTalon climber;
 
   /**
@@ -70,11 +70,11 @@ public class DaphneOneContainer {
     swerveDriveSubsystem = new SwerveDriveSubsystem(m0, m1, m2, m3);
     colorPanelSpinner = new ColorPanelSpinner();
     colorSensor = new ColorSensor();
-    limelight = new Limelight(swerveDriveSubsystem);
+    //limelight = new Limelight(swerveDriveSubsystem);
     conveyor = new ConveyorTalon();
     intake = new Intake();
-    shooter = new Shooter();
-    compressor = new Compressor();
+    //shooter = new Shooter();
+    //compressor = new Compressor();
     climber = new ClimberTalon();
 
     // create the input controllers
@@ -104,18 +104,18 @@ public class DaphneOneContainer {
     JoystickButton buttonB = new JoystickButton(mXboxController, XboxController.Button.kB.value);
     JoystickButton buttonY = new JoystickButton(mXboxController, XboxController.Button.kY.value);
     JoystickButton buttonLB = new JoystickButton(mXboxController, XboxController.Button.kBumperLeft.value);
-    JoystickButton buttonRB = new JoystickButton(mXboxController, XboxController.Button.kBumperRight.value);
+    //JoystickButton buttonRB = new JoystickButton(mXboxController, XboxController.Button.kBumperRight.value);
     JoystickButton buttonBack = new JoystickButton(mXboxController, XboxController.Button.kBack.value);
-    JoystickButton buttonStart = new JoystickButton(mXboxController, XboxController.Button.kStart.value);
+    //JoystickButton buttonStart = new JoystickButton(mXboxController, XboxController.Button.kStart.value);
 
     JoystickButton buttonY_2 = new JoystickButton(mXboxController2, XboxController.Button.kY.value);
     JoystickButton buttonX_2 = new JoystickButton(mXboxController2, XboxController.Button.kX.value);
     JoystickButton buttonB_2 = new JoystickButton(mXboxController2, XboxController.Button.kB.value);
-    JoystickButton buttonA_2 = new JoystickButton(mXboxController2,XboxController.Button.kA.value);
+    //JoystickButton buttonA_2 = new JoystickButton(mXboxController2,XboxController.Button.kA.value);
     JoystickButton buttonLB_2 = new JoystickButton(mXboxController, XboxController.Button.kBumperLeft.value);
-    JoystickButton buttonRB_2 = new JoystickButton(mXboxController2, XboxController.Button.kBumperRight.value);
+    //JoystickButton buttonRB_2 = new JoystickButton(mXboxController2, XboxController.Button.kBumperRight.value);
     JoystickButton buttonBack_2 = new JoystickButton(mXboxController2, XboxController.Button.kBack.value);
-    JoystickButton buttonStart_2 = new JoystickButton(mXboxController2, XboxController.Button.kStart.value);
+    //JoystickButton buttonStart_2 = new JoystickButton(mXboxController2, XboxController.Button.kStart.value);
     
     buttonA.whenPressed(new ToggleIntake(intake));
     buttonB.whileHeld(new IntakeSpeed(intake,-1));

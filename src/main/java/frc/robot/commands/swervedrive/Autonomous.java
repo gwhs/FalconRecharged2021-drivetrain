@@ -114,7 +114,7 @@ public class Autonomous extends CommandBase {
     
     //odometry.resetPosition(new Pose2d(0, 0, new Rotation2d(0)), new Rotation2d(Math.toRadians(0)));
     time.start();
-    boolean isAuto = drivetrain.getIsAuto();
+    //boolean isAuto = drivetrain.getIsAuto();
     drivetrain.setFieldOriented(false);
     drivetrain.setIsAuto(true);
     drivetrain.swapPIDSlot(1);

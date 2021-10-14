@@ -10,8 +10,8 @@ import edu.wpi.first.wpilibj2.command.InstantCommand;
 import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
 import frc.robot.commands.WaitForConveyor;
 import frc.robot.commands.conveyor.SenseCell;
-import frc.robot.commands.conveyor.SenseNewPowerCell;
-import frc.robot.commands.intake.IntakeSpeed;
+//import frc.robot.commands.conveyor.SenseNewPowerCell;
+//import frc.robot.commands.intake.IntakeSpeed;
 import frc.robot.commands.swervedrive.Autonomous;
 import frc.robot.subsystems.ConveyorTalon;
 import frc.robot.subsystems.Intake;
@@ -126,25 +126,25 @@ public class GalacticSearch extends SequentialCommandGroup {
     );
   } */
 
-    private static double[][] driveForward = {
-      {12,60},
-      {15,60},
-    };
+    //private static double[][] driveForward = {
+      //{12,60},
+      //{15,60},
+    //};
 
-    private static double[][] driveForward2 = {
-      {110,120},
-      {200,120},
-    };
+    //private static double[][] driveForward2 = {
+      //{110,120},
+      //{200,120},
+    //};
 
-    private static double[][] driveRight = {
-      {110,120},
-      {110,180},
-    };
+    //private static double[][] driveRight = {
+      //{110,120},
+      //{110,180},
+    //};
 
-    private static double[][] driveLeft = {
-      {90,120},
-      {90,90},
-    };
+    //private static double[][] driveLeft = {
+      //{90,120},
+      //{90,90},
+    //};
 
     // measuring from top down (0 is the top, 180 bottom)
     // (0,0) is the top left point

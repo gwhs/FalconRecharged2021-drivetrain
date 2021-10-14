@@ -11,10 +11,10 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.Drive.SwerveDriveModule;
 
 public class SwerveModuleCommand extends CommandBase {
-  private SwerveDriveModule mDriveModule;
+  //private SwerveDriveModule mDriveModule;
 
 	public SwerveModuleCommand(final SwerveDriveModule driveModule) {
-		this.mDriveModule = driveModule;
+		//this.mDriveModule = driveModule;
 
 		addRequirements(driveModule);
 	}

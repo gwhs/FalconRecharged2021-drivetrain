@@ -21,7 +21,7 @@ public class MoveBothClimberArms extends CommandBase {
    * Creates a new MoveBothClimberArms.
    */
   private double distance;
-  private ClimberTalon climberTalon;
+  //private ClimberTalon climberTalon;
   private TalonFX masterArm;
   private TalonFX slaveArm;
   private double initPos;
@@ -30,7 +30,7 @@ public class MoveBothClimberArms extends CommandBase {
   public MoveBothClimberArms(ClimberTalon climberTalon, double ticks) {
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(climberTalon);
-    this.climberTalon = climberTalon;
+    //this.climberTalon = climberTalon;
     masterArm = climberTalon.getUpperArm();
     slaveArm = climberTalon.getUpperArm();
     distance = ticks;

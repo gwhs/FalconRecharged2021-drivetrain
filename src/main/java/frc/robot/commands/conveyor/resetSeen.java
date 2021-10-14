@@ -15,7 +15,7 @@ public class resetSeen extends InstantCommand {
 
   public resetSeen() {
     // Use addRequirements() here to declare subsystem dependencies.
-    this.conveyorTalon = conveyorTalon;
+    //this.conveyorTalon = conveyorTalon;
     addRequirements(conveyorTalon);
   }
 
