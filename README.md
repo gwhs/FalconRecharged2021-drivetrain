@@ -6,6 +6,6 @@
   - Minimize compile problems
      - Remove unused code
 
-## General Information
-  ###### Just Drivetrain
+# General Information
+  # Just Drivetrain
     This is only the code neccessary to drive the robot.
