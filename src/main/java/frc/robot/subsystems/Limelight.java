@@ -42,8 +42,8 @@ public class Limelight extends SubsystemBase  {
   private double xErr;
   private double rErr;
 
-  private double prevXErr;
-  private double prevRErr;
+  //private double prevXErr;
+  //private double prevRErr;
   SwerveDriveSubsystem swerveDriveSubsystem;
 
   public Limelight(SwerveDriveSubsystem swerveDriveSubsystem) {
@@ -59,8 +59,8 @@ public class Limelight extends SubsystemBase  {
     SmartDashboard.putData(intakeMode);
     xErr = Double.MIN_VALUE;
     rErr = Double.MIN_VALUE;
-    prevXErr = Double.MIN_VALUE;
-    prevRErr = Double.MIN_VALUE;
+    //prevXErr = Double.MIN_VALUE;
+    //prevRErr = Double.MIN_VALUE;
     this.swerveDriveSubsystem = swerveDriveSubsystem;
   }
 
@@ -82,8 +82,8 @@ public class Limelight extends SubsystemBase  {
   {
     xErr = Double.MIN_VALUE;
     rErr = Double.MIN_VALUE;
-    prevXErr = Double.MIN_VALUE;
-    prevRErr = Double.MIN_VALUE;
+    //prevXErr = Double.MIN_VALUE;
+    //prevRErr = Double.MIN_VALUE;
   }
 
   public void align() // unfinished
@@ -107,8 +107,8 @@ public class Limelight extends SubsystemBase  {
   }
 
   private void updateErrors() {
-    prevRErr = rErr;
-    prevXErr = xErr;
+    //prevRErr = rErr;
+    //prevXErr = xErr;
     rErr = getAngleErr();
     xErr = shooterX;
   }

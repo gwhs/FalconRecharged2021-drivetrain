@@ -26,7 +26,7 @@ public class SwerveDriveModule extends SubsystemBase {
      */
 
 
-    private double mLastError = 0, mLastTargetAngle = 0;
+    //private double mLastError = 0, mLastTargetAngle = 0;
 
     private final int mModuleNumber;
 
@@ -166,7 +166,7 @@ public class SwerveDriveModule extends SubsystemBase {
 
     public void setTargetAngle(double targetAngle, boolean isAuto) {
 
-        mLastTargetAngle = targetAngle;
+        //mLastTargetAngle = targetAngle;
 
         targetAngle %= 360;
 
@@ -203,7 +203,7 @@ public class SwerveDriveModule extends SubsystemBase {
         targetAngle += currentAngle - currentAngleMod;
 
         final double currentError = mAngleMotor.getClosedLoopError(0);
-        mLastError = currentError;
+        //mLastError = currentError;
         targetAngle *= 1024.0 / 360.0;
         mAngleMotor.set(ControlMode.Position, targetAngle);
 
@@ -228,9 +228,9 @@ public class SwerveDriveModule extends SubsystemBase {
         mDriveMotor.setSelectedSensorPosition(0);
     }
 
-    public double getTargetAngle() {
+    /*public double getTargetAngle() {
         return mLastTargetAngle;
-    }
+    }*/
 
     public double encoderTicksToInches(final double ticks) {
         double ticksToInches = ticks / Constants.TICKS_PER_INCH;

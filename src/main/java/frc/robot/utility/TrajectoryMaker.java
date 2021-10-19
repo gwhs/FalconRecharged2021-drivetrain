@@ -31,9 +31,9 @@ private TrajectoryConfig config;
 private Trajectory trajectory;
 private ArrayList<Translation2d> listOfPoints;
 
-private static double MAX_VELOCITY = 10; //Meters per second
+/*private static double MAX_VELOCITY = 10; //Meters per second
 private static double MAX_ACCELERATION = 3.5; // Meters per second squared
-private static double MAX_CENTRIPETAL = 3.5;
+private static double MAX_CENTRIPETAL = 3.5;*/
 
 
 public TrajectoryMaker(Pose2d start, Pose2d end, boolean isHyp) {

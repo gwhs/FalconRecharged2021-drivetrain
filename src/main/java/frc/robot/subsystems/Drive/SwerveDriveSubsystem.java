@@ -10,7 +10,7 @@ import frc.robot.Constants;
 public class SwerveDriveSubsystem extends HolonomicDrivetrain { // + is clockwise - is counter clockwise test commit 2 electric bugaloo
 	private static final double WHEELBASE = 22.5; 
 	private static final double TRACKWIDTH = 22.5;
-	private static final double RATIO = Math.sqrt(Math.pow(WHEELBASE, 2) + Math.pow(TRACKWIDTH, 2));
+	//private static final double RATIO = Math.sqrt(Math.pow(WHEELBASE, 2) + Math.pow(TRACKWIDTH, 2));
 	private boolean isAuto;
 	
 	/*
@@ -143,7 +143,7 @@ public class SwerveDriveSubsystem extends HolonomicDrivetrain { // + is clockwis
 			    Math.abs(rotation) > 0.05) {
 				mSwerveModules[i].setTargetAngle(angles[i] + 180, isAuto);
 			} else {
-				mSwerveModules[i].setTargetAngle(mSwerveModules[i].getTargetAngle(), isAuto);
+				//mSwerveModules[i].setTargetAngle(mSwerveModules[i].getTargetAngle(), isAuto);
 			}
 			mSwerveModules[i].setTargetSpeed(speeds[i]);
 		}
