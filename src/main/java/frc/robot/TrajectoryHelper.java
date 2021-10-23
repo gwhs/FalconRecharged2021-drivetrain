@@ -219,6 +219,11 @@ public static double[][] testStep= {
             {15,60},
         };
 
+        public static double[][] Forward2M = {
+            {20,20},
+            {60,45},
+        };
+
     public static double GLOBAL_SCALE = 0.827;
 
     /**
@@ -484,5 +489,10 @@ public static double[][] testStep= {
 
 	public static TrajectoryMaker test2MetersAndBack() {
 		return null;
-	}
+    }
+    
+    public static TrajectoryMaker createForward2M() // test path going only 4 meters forward
+    {
+        return createTrajectory(Forward2M, GLOBAL_SCALE, 0, 0, false);
+    }
 }

@@ -8,6 +8,7 @@
 package frc.robot;
 
 
+
 import com.ctre.phoenix.motorcontrol.can.TalonFX;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 //import edu.wpi.first.wpilibj.Compressor;
@@ -110,7 +111,7 @@ public class DaphneTwoContainer {
   }
 
   public void configureButtonsForPowerPort() {
-    //JoystickButton buttonA = new JoystickButton(mXboxController, XboxController.Button.kA.value);
+    JoystickButton buttonA = new JoystickButton(mXboxController, XboxController.Button.kA.value);
     //JoystickButton buttonX = new JoystickButton(mXboxController, XboxController.Button.kX.value);
     //JoystickButton buttonB = new JoystickButton(mXboxController, XboxController.Button.kB.value);
     //JoystickButton buttonY = new JoystickButton(mXboxController, XboxController.Button.kY.value);
@@ -121,7 +122,8 @@ public class DaphneTwoContainer {
     //JoystickButton stickLeft = new JoystickButton(mXboxController, XboxController.Button.kStickLeft.value);
     //JoystickButton stickRight = new JoystickButton(mXboxController, XboxController.Button.kStickRight.value);
 
-
+    TrajectoryMaker Forward2M = TrajectoryHelper.createForward2M();
+    buttonA.whenPressed(new Autonomous(swerveDriveSubsystem, Forward2M.getTrajectory(), Forward2M.getAngle(), true));
     //buttonY.whileHeld(new ConveyorSpeed( conveyorT, .5)); //while Y is held down conveyor runs
     //leftBumper.whileHeld(new SetShooterSpeed(shooterMotor, 6000));
     back.whenPressed(new ZeroNavX(swerveDriveSubsystem));
@@ -307,6 +309,7 @@ public class DaphneTwoContainer {
    TrajectoryMaker path21 = TrajectoryHelper.createBounce21();
    TrajectoryMaker path30 = TrajectoryHelper.createBounce30();
    TrajectoryMaker path31 = TrajectoryHelper.createBounce31();
+   TrajectoryMaker testPath = TrajectoryHelper.createForward2M();
 
 /*
     Command autoCommand00 = new Autonomous(swerveDriveSubsystem, path00.getTrajectory(), path00.getAngle(), true);
