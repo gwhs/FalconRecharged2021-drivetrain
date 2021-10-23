@@ -70,7 +70,7 @@ public class DaphneTwoContainer {
   //private final Shooter shooterMotor;
   //private final Compressor compressor;
   //private final ClimberTalon climberT;
-  //private final LimelightPortal limeL;
+  //private final LimelightPortal limeL;F
 
   /**
    * The container for the robot. Contains subsystems, OI devices, and commands.
@@ -124,7 +124,7 @@ public class DaphneTwoContainer {
 
     //buttonY.whileHeld(new ConveyorSpeed( conveyorT, .5)); //while Y is held down conveyor runs
     //leftBumper.whileHeld(new SetShooterSpeed(shooterMotor, 6000));
-    back.whileHeld(new ZeroNavX(swerveDriveSubsystem));
+    back.whenPressed(new ZeroNavX(swerveDriveSubsystem));
     //buttonX.whileHeld(new ConveyorSpeed( conveyorT, DaphneTwoConstants.CONVEYOR_UNLOADS_SPEED)); // change seconds later
     rightBumper.whenPressed(new ToggleFieldOrientedCommand(swerveDriveSubsystem));
     //start.whenPressed(new InstantCommand(() -> {shooterMotor.setMotorRPM(0);}, shooterMotor)); 
