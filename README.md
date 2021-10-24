@@ -3,8 +3,8 @@
 *Work in Progress*
 
 ## Software To Do List
-  - Minimize compile problems
-     - Remove unused code
+  -Code complex autonomous paths
+  -*Maybe* figure out limelight
 
 # General Information
   # Just Drivetrain
