@@ -220,8 +220,8 @@ public static double[][] testStep= {
         };
 
         public static double[][] Forward2M = {
-            {20,20},
-            {60,45},
+            {0,0},
+            {0,78.74},
         };
 
     public static double GLOBAL_SCALE = 0.827;
