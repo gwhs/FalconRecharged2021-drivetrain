@@ -48,11 +48,11 @@ public final class Constants {
 
     public static final double MOD_TO_CENTER = 0.28575; // distance in meter from center point to each swerve module
 
-    public static final double MAX_ANGLE_VELOCITY = 90;
+    public static final double MAX_ANGLE_VELOCITY = 45; //90;
     public static final double MAX_ANGLE_ACCELERATION = 180;
 
-    public static final double MAX_DISTANCE_VELOCITY = 96; //24 inches per second
-    public static final double MAX_DISTANCE_ACCELERATION = 96;
+    public static final double MAX_DISTANCE_VELOCITY = 12; //96; //24 inches per second
+    public static final double MAX_DISTANCE_ACCELERATION = 48; //96;
     public static final double DISTANCE_TOLERANCE = 6;  //inches
     public static final double DISTANCE_PID_P = 0.03;
     public static final double DISTANCE_PID_I = 0.00;
